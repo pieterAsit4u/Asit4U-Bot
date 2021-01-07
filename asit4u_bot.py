@@ -13,7 +13,14 @@ async def on_message(message):
         return
 
     if message.content.startswith('$hello'):
-        await message.channel.send('Hello!' + ' ' + message.author.display_name + '! What would you like for lunch?')
+        channel = message.channel
+        await message.channel.send('Hello!')
+
+        def check(m):
+            return m.content == 'hello' and m.channel == channel
+
+        msg = await client.wait_for('message', check=check)
+        await channel.send('Hello {.author.display_name}!'.format(msg))
 
 
 client.run(myConfig.bot_token)
