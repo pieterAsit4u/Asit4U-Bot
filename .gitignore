@@ -1,2 +1,3 @@
-myConfig.py
-venv
+
+/venv
+/myConfig.py
