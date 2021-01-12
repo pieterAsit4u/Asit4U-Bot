@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+
+/venv
+/myConfig.py
+=======
+/__pycache__/myConfig.cpython-36.pyc
+/venv
+/myconfig.py
+/.idea
+>>>>>>> master
