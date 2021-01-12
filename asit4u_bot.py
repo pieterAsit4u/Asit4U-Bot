@@ -1,5 +1,5 @@
 import discord
-import myConfig
+import myconfig
 
 client = discord.Client()
 
@@ -16,4 +16,4 @@ async def on_message(message):
         await message.channel.send('Hello!' + ' ' + message.author.display_name + '! What would you like for lunch?')
 
 
-client.run(myConfig.bot_token)
+client.run(myconfig.bot_token)
